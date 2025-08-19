@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: url("A_promotional_digital_image_for_District_5_-_Powe.png") no-repeat center center fixed;
+      background: url("./A_promotional_digital_image_for_District_5_-_Powe.png") no-repeat center center fixed;
       background-size: cover;
       background-clip: border-box;
       color: #0ff;
