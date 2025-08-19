@@ -1,145 +1,146 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>District 5 — Frosh Week Hunger Games</title>
   <style>
-    /* Base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: "Trebuchet MS", sans-serif;
-      color: white;
-      text-align: center;
-      min-height: 100vh;
-      background: url("A_promotional_digital_image_for_\"District_5_–_Powe.png") no-repeat center center fixed;
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url("A_promotional_digital_image_for_District_5_-_Powe.png") no-repeat center center fixed;
       background-size: cover;
       background-clip: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 6px black;
-      margin-bottom: 1rem;
-      animation: glow 2s infinite alternate;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 5px black;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-      margin-bottom: 1.5rem;
-      text-shadow: 1px 1px 5px black;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 10px;
-      border: 2px solid white;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-    }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.1);
-      box-shadow: 0 0 15px #ffde59;
-    }
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      width: 90%;
-      margin: 40px auto;
-    }
-
-    .card {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 15px;
-      padding: 20px;
+      color: #0ff;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(8px);
     }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px #ffde59;
+    header {
+      padding: 3rem 1rem;
+      background: linear-gradient(90deg, #0ff, #f0f, #ff0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 3rem;
+      font-weight: bold;
+      animation: flicker 2s infinite;
     }
-
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0; }
+    }
+    section {
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 1rem;
+    }
+    .card {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid #0ff;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 0 20px #0ff5;
+    }
+    h2 {
+      color: #ff0;
+    }
+    #countdown {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: #f0f;
+    }
+    button {
+      background: #0ff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
     footer {
-      margin-top: 50px;
+      margin-top: 3rem;
       font-size: 0.9rem;
-      text-shadow: 1px 1px 5px black;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes glow {
-      from { text-shadow: 2px 2px 10px #ffde59; }
-      to { text-shadow: 2px 2px 20px #ffffff; }
-    }
-
-    /* Mobile Friendly */
-    @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.2rem; }
-      p { font-size: 1rem; }
-      .btn { font-size: 1rem; padding: 10px 18px; }
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>🔥 District 5 — Frosh Week 🔥</h1>
-  <h2>"The Powerhouse of the Games ⚡"</h2>
-  <p>Welcome, tributes of District 5! You don’t just survive Frosh Week — you thrive with ENERGY. May the odds be ever in your favour (unless you forget your student card).</p>
+  <header>
+    District 5 — Frosh Week Hunger Games ⚡️
+  </header>
 
-  <a href="#" class="btn">Join the Rebellion</a>
-  <a href="#" class="btn">Charge Your Spirit</a>
+  <section>
+    <div class="card">
+      <h2>The Arena Opens In:</h2>
+      <div id="countdown"></div>
+    </div>
+  </section>
 
-  <div class="card-container">
+  <section>
     <div class="card">
-      <h3>⚡ Power Games</h3>
-      <p>Compete in high-voltage challenges — caffeine-fueled dodgeball, late-night trivia, and more!</p>
+      <h2>Event Schedule</h2>
+      <p>🏹 Day 1: Tribute Selection & Opening Ceremonies</p>
+      <p>⚡ Day 2: Obstacle Course — Outrun Campus Security</p>
+      <p>🔥 Day 3: Bonfire Night (Don’t get voted off the island by mistake)</p>
+      <p>🥤 Day 4: Mocktail Mixer in the Capitol Lounge</p>
+      <p>🏆 Day 5: Final Showdown & Closing Feast</p>
     </div>
+  </section>
+
+  <section>
     <div class="card">
-      <h3>🎉 Nightlife</h3>
-      <p>Dance like you’re rebelling against the Capitol. Glow sticks = mandatory.</p>
+      <h2>Register as Tribute</h2>
+      <p>Think you have what it takes? Enter your name below and may the odds be ever in your favor.</p>
+      <input type="text" id="tributeName" placeholder="Your Name" style="padding:0.5rem; border-radius:6px;">
+      <br>
+      <button onclick="registerTribute()">Enter Arena</button>
+      <p id="tributeOutput"></p>
     </div>
-    <div class="card">
-      <h3>🍕 Survival Rations</h3>
-      <p>Pizza is our bread and circuses. Eat like Katniss after a victory tour.</p>
-    </div>
-  </div>
+  </section>
 
   <footer>
-    &copy; 2025 District 5 Frosh Week | Powered by ENERGY ⚡
+    Powered by District 5 Energy — Frosh Week 2025 ⚡️
   </footer>
+
+  <script>
+    // Countdown Timer
+    const targetDate = new Date("2025-09-01T12:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdownEl.innerHTML = "The Games Have Begun!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    // Tribute Registration
+    function registerTribute() {
+      const name = document.getElementById("tributeName").value.trim();
+      const output = document.getElementById("tributeOutput");
+
+      if (name) {
+        output.innerHTML = `🎉 Welcome, Tribute <strong>${name}</strong>! The Capitol salutes you.`;
+      } else {
+        output.innerHTML = "Please enter a valid name, future Tribute.";
+      }
+    }
+  </script>
 </body>
 </html>
